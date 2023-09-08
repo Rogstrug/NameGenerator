@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+        <meta charset="UTF-8">
+        <title>Band Generator</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="sass/design.css">
+</head>
+
+  <body>
+    <div class="cent">
+        <% if(!locals.adjectiv && !locals.bandName){%>
+            <h1>Welcome to the Band Generator Machine!</h1>
+            <%} else { %>
+            <h1><%= adjectiv %> <%= bandName %></h1>
+            <% } %>
+            <% for(var i = 0; i < 2; i++){ %>
+            <br>
+            <% } %>
+        <form action="/submit" method="POST">
+            <button type="submit">Generate</button>
+        </form>
+        <% for(var i = 0; i < 5; i++){ %>
+            <br>
+            <% } %>
+        <h6>Karlo Miloš, 8. 9. 2023.</h6>
+    </div>
+  </body>
+</html>
